@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="form.css">
+    <title>Practice - С Новым Годом!</title>
+</head>
+<body>
+<form class="form" action="https://echo.htmlacademy.ru/">
+    <div class="user">
+        <ul class="user-info">
+            <li class="user-info__item">
+                <label for="name">Ф.И.О</label>
+                <input type="text" name="name" id="name" placeholder="Введите ваше ФИО" required>
+            </li>
+            <li class="user-info__item">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Введите ваш e-mail" required>
+            </li>
+        </ul>
+        <ul class="address-date">
+            <li class="user-info__item">
+                <label for="address">Укажите ваш адрес</label>
+                <input type="text" name="address" id="address" placeholder="Ваш адрес" required>
+            </li>
+            <li class="user-info__item">
+                <label for="date">Укажите дату доставки</label>
+                <input type="date" name="date" id="date" required   >
+            </li>
+        </ul>
+    </div>
+
+    <div class="delivery">
+        <h3 class="delivery__title">Выберите комплектацию</h3>
+        <ul class="delivery-list">
+            <li class="delivery-info__item">
+                <input type="radio" id="base" name="komplekt" value="base" checked>
+                <label for="base">Базовая</label>
+            </li>
+            <li class="delivery-info__item">
+                <input type="radio" id="middle" name="komplekt" value="middle">
+                <label for="middle">Средняя</label>
+            </li>
+            <li class="delivery-info__item">
+                <input type="radio" id="max" name="komplekt" value="max">
+                <label for="max">Максимальная</label>
+            </li>
+        </ul>
+
+        <h3 class="delivery__title">Дополнительные услуги</h3>
+        <ul class="delivery-list">
+            <li class="delivery-info__item">
+                <input type="radio" id="sport" name="style" value="sport">
+                <label for="sport">Спортивное</label>
+            </li>
+            <li class="delivery-info__item">
+                <input type="radio" id="race" name="style" value="race">
+                <label for="race">Гоночное</label>
+            </li>
+            <li class="delivery-info__item">
+                <input type="radio" id="normal" name="style" value="normal" checked>
+                <label for="normal">Неспортивное</label>
+            </li>
+        </ul>
+    </div>
+
+    <div class="select-section">
+        <h3 class="select__title">Оплата и комментарий</h3>
+        <select name="payment" class="custom-select">
+            <option>СБП</option>
+            <option>Крипта</option>
+            <option>Картой</option>
+        </select>
+        <label for="comment">Комментарий</label>
+        <textarea name="comment" id="comment" placeholder="Ваш комментарий"></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">КУПИТЬ МАШИНУ</button>
+</form>
+<script src="form.js"></script>
+</body>
+</html>

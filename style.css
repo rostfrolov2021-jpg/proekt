@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #00FF00;
+    --blue: #0000FF;
+    --yellow: #ffc400;
+    --dark-bg: #0f172a;
+    --text: #fff;
+    --castum: #f1f1e9;
+}
+
+body {
+    background-color: var(--yellow);
+    color: var(--text);
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(to right, var(--green) 50%, var(--blue) 50%);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Основной контейнер */
+main {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 5vh; 
+}
+
+.section {
+    width: 90%;
+    max-width: 1000px;
+    min-height: 40vh;
+    background-color: #ffee00;
+    border-radius: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Стили заголовков и текста внутри секций */
+.sic1{
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(174, 0, 255, 0.5);
+    margin-bottom: 15px;
+    color: var(--green);
+}
+.sic2 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(174, 0, 255, 0.5);
+    margin-bottom: 15px;
+    color: var(--blue);
+}
+.texs1, .texs2 {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.5);
+    color: var(--castum);
+}
+
+footer {
+    background: transparent;
+    padding: 40px;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(174, 0, 255, 0.5);
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transition: 0.3s;
+}
+label{
+background-image: url("image/moon-removebg-preview.png");
+background-size: contain;
+width: 50px; height: 50px;
+}
+input:checked~header{
+background-color:grey;
+}
+input:checked~.section2{
+background-color:black;
+}
+input:checked~.section1{
+background-color:black;
+}
+input:checked~.text1,.statya-text,.card{
+background-color:white;
+}
+input:checked~header label{
+background-image: url("image/sun-removebg-preview.png");
+}
+/* Адаптивность */
+
+@media (max-width: 768px) {
+        nav {
+            display: none;
+        }
+        
+        .burger {
+            display: flex;
+        }
+
+        .sic1, .sic2 {
+            font-size: 1.8rem;
+        }
+
+        .section {
+            width: 95%;
+            min-height: 50vh;
+        }
+    
+
+    /* Анимация бургера (если добавите класс .active через JS) */
+    .burger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    .menu{
+    display: none;
+    }
+}
