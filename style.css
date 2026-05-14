@@ -101,7 +101,7 @@ main {
 .texs1, .texs2 {
     font-size: 1.5rem;
     text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.5);
-    color: var(--castum);
+    color: var(--blue);
 }
 
 footer {
