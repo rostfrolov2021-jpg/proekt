@@ -2,6 +2,15 @@
    margin: 0; 
    padding: 0;
 }
+:root {
+    --green: #00FF00;
+    --blue: #0000FF;
+    --yellow: #ffc400;
+    --dark-bg: #0f172a;
+    --text: #fff;
+    --castum: #f1f1e9;
+    --grey: #333;
+}
 header{
     display: flex;
     justify-content: space-around;
@@ -18,7 +27,7 @@ nav{
     width: 80%;
 }
 a {
-    color: #0400ff9d;
+    color: #ffffff;
     text-decoration: none;
 }
 li{
@@ -45,4 +54,45 @@ article{
 }
 .fon{
     font-size: 6vh;
+}
+label{
+    background-image: url("images/moon-removebg-preview.png");
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+
+input:checked ~ header{
+    background: var(--grey);
+}
+
+input:checked ~ main{
+    background-color: var(--dark-bg);
+}
+input:checked ~ footer{
+    background-color: var(--dark-bg);
+}
+input:checked ~ main .section{
+    background-color: var(--dark-bg);
+}
+input:checked ~ main .texs1,
+input:checked ~ main .texs2{
+    color: white;
+}
+
+input:checked ~ header label{
+    background-image: url("images/son-removebg-preview.png");
+    width: 50px;
+    height: 50px;
+}
+input{
+display: none;
+}
+footer {
+    background: transparent;
+    padding: 40px;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
